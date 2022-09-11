@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const snekfetch = require('snekfetch');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { InteractionResponseType } = require('discord-api-types/v9');
 
 module.exports = {
 	data: new SlashCommandBuilder()

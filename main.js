@@ -4,9 +4,6 @@ const path = require('node:path');
 const { Client, Intents, Collection } = require('discord.js');
 const token = process.env.DISCORD_TOKEN;
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
-
-
-
 client.commands = new Collection();
 
 const commandsPath = path.join(__dirname, 'commands');
