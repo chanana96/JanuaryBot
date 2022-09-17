@@ -14,7 +14,6 @@ module.exports = {
 				let remMsg = rem[i].msg
 	
 				if (Date.now() > time){
-					console.log('times up, deleted!')
 					client.channels.cache.get(channelid).send(`<@${userId}> ${remMsg}`)
 					delete rem[i]
 				}
@@ -23,6 +22,6 @@ module.exports = {
 			fs.writeFile('./reminders.json', JSON.stringify(rem, null, 4), err =>{
 				if(err) throw err;
 			})
-		}, (5000))
+		}, (30000))
 	}
 }
