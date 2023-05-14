@@ -1,5 +1,5 @@
 const { authCheck } = require("../utils/AuthCheck");
-const { createRedisClient } = require("../../redisapi/CreateRedisClient");
+const { createRedisClient } = require("../../redisApi/CreateRedisClient");
 const { setTokens } = require("./TokenAPI");
 const { initPlayerData } = require("./getPlayerInfo");
 

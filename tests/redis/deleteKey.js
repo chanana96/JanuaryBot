@@ -1,4 +1,4 @@
-const RedisClient = require("../../src/api/redisapi/CreateRedisClient");
+const RedisClient = require("../../src/api/redisApi/CreateRedisClient");
 
 const deleteKey = async (keyToDelete) => {
   const client = await RedisClient.createRedisClient();

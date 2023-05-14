@@ -1,4 +1,4 @@
-const { createRedisClient } = require("../../redisapi/CreateRedisClient");
+const { createRedisClient } = require("../../redisApi/CreateRedisClient");
 
 const authCheck = async (interaction) => {
   const discordUID = interaction.user.id;

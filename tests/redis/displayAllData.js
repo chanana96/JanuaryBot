@@ -1,4 +1,4 @@
-const RedisClient = require("../../src/api/redisapi/CreateRedisClient");
+const RedisClient = require("../../src/api/redisApi/CreateRedisClient");
 
 const displayAllData = async () => {
   const client = await RedisClient.createRedisClient();
