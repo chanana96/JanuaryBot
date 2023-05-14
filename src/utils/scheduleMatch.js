@@ -12,7 +12,7 @@ const moment = require("moment");
 const matchCheck = async (nonMomentDate, interaction) => {
   const calendarIds = Object.values(discordRolesForGoogleCalendar);
   const client = await getCalendarClient();
-
+  console.log(calendarIds);
   let maxStart = null;
   let minEnd = null;
   let date = moment(nonMomentDate);

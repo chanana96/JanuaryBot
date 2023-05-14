@@ -37,6 +37,12 @@ for (const file of eventFiles) {
 }
 
 client.on(Events.InteractionCreate, async (interaction) => {
+  if (
+    process.env.NODE_ENV === "development" &&
+    interaction.guild.id !== process.env.GUILD_ID
+  ) {
+    return;
+  }
   if (interaction.isChatInputCommand()) {
     const command = interaction.client.commands.get(interaction.commandName);
     if (!command) {
