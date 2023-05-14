@@ -1,0 +1,46 @@
+{
+  "name": "januarybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "axios": "^1.3.4",
+    "canvas": "^2.11.2",
+    "chart.js": "^3.9.1",
+    "chartjs-node-canvas": "^4.1.6",
+    "chartjs-plugin-background": "^2.0.0",
+    "countries-and-timezones": "^3.4.1",
+    "discord-api-types": "^0.36.2",
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.2",
+    "googleapis": "^118.0.0",
+    "moment-timezone": "^0.5.43",
+    "nodemon": "^2.0.19",
+    "npm-run-all": "^4.1.5",
+    "obs-websocket-js": "^5.0.2",
+    "redis": "^4.6.5",
+    "snekfetch": "^4.0.4"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "delete:memurai": "node tests\\redis\\deleteKey.js",
+    "display:memurai": "node tests\\redis\\displayAllData.js",
+    "start:memurai": "memurai-cli start",
+    "wait:memurai": "wait-on tcp:localhost:6379",
+    "start:app": "concurrently \"nodemon src\\main.js\" \"npm:deploy-commands-watch\" ",
+    "deploy-commands": "node src\\deploy-commands.js",
+    "deploy-commands-watch": "nodemon --watch src\\deploy-commands.js --exec \"npm run deploy-commands\"",
+    "dev": "run-p start:memurai wait:memurai start:*",
+    "debug": "run-p start:memurai wait:memurai debug:*",
+    "debug:app": "node --inspect src\\main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "wait-on": "^7.0.1"
+  }
+}
