@@ -34,6 +34,7 @@ module.exports = {
     const role = memberRoles.find((role) =>
       Object.keys(discordRolesForGoogleCalendar).includes(role.name)
     ).name;
+
     //exception handling
     if (!role) {
       await interaction.reply("THIS ROLE IS ONLY FOR PEOPLE IN A TEAM.");

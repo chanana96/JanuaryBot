@@ -1,5 +1,5 @@
 const { google } = require("googleapis");
-const key = require("./service-account.json");
+const { key } = require("./service-account");
 
 const getCalendarClient = () => {
   return new Promise((resolve, reject) => {
