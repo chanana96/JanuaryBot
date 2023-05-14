@@ -1,5 +1,5 @@
 const { SlashCommandSubcommandBuilder } = require("@discordjs/builders");
-const { getData } = require("../../API/val/valAuthApi/AuthenticateAPI");
+const { getData } = require("../../api/val/valAuthApi/AuthenticateAPI");
 
 const data = new SlashCommandSubcommandBuilder()
   .setName("authenticate")

@@ -1,5 +1,4 @@
 const axios = require("axios");
-const Discord = require("discord.js");
 const { AttachmentBuilder, EmbedBuilder } = require("discord.js");
 require("dotenv").config();
 

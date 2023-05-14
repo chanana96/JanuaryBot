@@ -1,5 +1,5 @@
 const { SlashCommandSubcommandBuilder } = require("@discordjs/builders");
-const { getData } = require("../../API/val/fnaticApi/FnaticAPI");
+const { getData } = require("../../api/val/fnaticApi/FnaticAPI");
 
 const data = new SlashCommandSubcommandBuilder()
   .setName("fnatic")
