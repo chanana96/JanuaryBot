@@ -4,7 +4,6 @@ const card = require("./valorantCommands/card");
 const store = require("./valorantCommands/store");
 const fnatic = require("./valorantCommands/fnatic");
 const authenticate = require("./valorantCommands/authenticate");
-const record = require("./valorantCommands/record");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -53,9 +52,6 @@ module.exports = {
         login = interaction.options.getString("login");
         password = interaction.options.getString("password");
         await authenticate.execute(interaction, login, password);
-        break;
-      case "record":
-        await record.execute(interaction);
         break;
     }
   },
